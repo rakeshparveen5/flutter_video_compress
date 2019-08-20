@@ -80,6 +80,7 @@ class FFmpegCommander(private val context: Context, private val channelName: Str
                     }
 
                     override fun onFinish() {
+                        try{
                         val json = utility.getMediaInfoJson(context, file.absolutePath)
                         json.put("isCancel", false)
                         result.success(json.toString())
@@ -87,6 +88,10 @@ class FFmpegCommander(private val context: Context, private val channelName: Str
                             File(path).delete()
                         }
                         totalTime = 0
+                        }
+                        catch(e:Exception){
+                            e?.stackTrace
+                        }
                     }
                 })
     }
