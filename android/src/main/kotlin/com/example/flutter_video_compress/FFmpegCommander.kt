@@ -7,6 +7,7 @@ import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler
 import nl.bravobit.ffmpeg.FFmpeg
 import nl.bravobit.ffmpeg.FFtask
 import java.io.File
+import android.util.Log;
 
 class FFmpegCommander(private val context: Context, private val channelName: String) {
     private var stopCommand = false
@@ -90,7 +91,7 @@ class FFmpegCommander(private val context: Context, private val channelName: Str
                         totalTime = 0
                         }
                         catch(e:Exception){
-                            e?.stackTrace
+                            Log.e("flutter_video_compress >",e?.stackTrace)
                         }
                     }
                 })
