@@ -90,7 +90,7 @@ class FFmpegCommander(private val context: Context, private val channelName: Str
                             }
                             totalTime = 0
                         } catch (e: Exception) {
-                            Log.e("flutter_video >", e?.message)
+                            print(e.stackTrace)
                         }
                     }
                 })
