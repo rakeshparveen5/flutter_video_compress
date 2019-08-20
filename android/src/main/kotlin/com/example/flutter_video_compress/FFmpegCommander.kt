@@ -7,7 +7,7 @@ import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler
 import nl.bravobit.ffmpeg.FFmpeg
 import nl.bravobit.ffmpeg.FFtask
 import java.io.File
-import android.util.Log;
+import android.util.Log
 
 class FFmpegCommander(private val context: Context, private val channelName: String) {
     private var stopCommand = false
