@@ -91,7 +91,7 @@ class FFmpegCommander(private val context: Context, private val channelName: Str
                         totalTime = 0
                         }
                         catch(e:Exception){
-                            Log.e("flutter_video_compress >",e?.stackTrace)
+                            Log.e("flutter_video_compress >",e?.stackTrace?.toString())
                         }
                     }
                 })
